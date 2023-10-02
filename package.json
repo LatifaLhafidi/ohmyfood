@@ -1,0 +1,17 @@
+{
+  "name": "ohMyfood",
+    "version": "1.0.0",
+    "description": "projet openclassroms",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch style.scss style.css"
+    },
+    "author": "lhafidi laifa",
+    "license": "ISC",
+    "dependencies": {
+        "sass": "^1.52.3"
+    },
+  "devDependencies": {
+    "sass": "^1.68.0"
+  }
+}

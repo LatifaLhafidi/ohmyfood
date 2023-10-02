@@ -1,0 +1,62 @@
+@use "../utils/mixins.scss";
+
+.fonctionnement{
+    background-color: white;
+    padding: 0 5rem;
+    @media screen and (max-width:900px) {
+      padding: 0 1rem;
+      
+   }
+    & ol{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:2rem;
+        @media screen and (max-width:900px) {
+           flex-direction: column;
+           
+        }
+      }
+       & li {
+        background-color: #F6F6F6;
+        padding: 1.2rem 2rem;
+        border-radius: 1rem;
+        list-style: none;
+        flex-grow: 1;
+        font-size: 1rem;
+        font-weight: bold;
+        @include mixins.box-shadow;
+        @media screen and (max-width:900px) {
+          width: 100%;
+          min-width: 23rem;
+          
+       }
+        
+  
+      & i {
+        margin-right: 1rem;
+        color:gray;
+        &:hover {
+          color:#9356dc;;
+        }
+      }
+      & span {
+        position: relative;
+        left: -3rem;
+        border: 1px solid #9356dc;
+        padding: 0.4rem 0.8rem;
+        border-radius: 50%;
+        font-weight: bold;
+        background-color: #9356dc;
+        color: white;
+        & :hover {
+          cursor: pointer;
+        }
+      }
+    }
+    
+    
+  }
+
+  
+  

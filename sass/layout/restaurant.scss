@@ -1,0 +1,122 @@
+@use "../utils/mixins.scss";
+.restaurant {
+    background-color: #F6F6F6;
+    margin-top: 30px;
+    padding: 0 5rem;
+  
+    @media screen and (max-width:900px) {
+        padding: 0 1rem;
+    }
+
+    h2 {
+        padding-top: 1rem;
+
+
+
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        padding-bottom: 4rem;
+        @media screen and (max-width:900px) {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+
+    }
+
+    .card {
+        cursor: pointer;
+        position: relative;
+        height: 18rem;
+        flex-grow: 1;
+        min-width: 20rem;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 40%;
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: 0 3px 8px darkgray;
+
+        @media screen and (max-width:900px) {
+            
+            width: 99%;
+
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            min-height: 180px;
+            max-height: 210px;
+            border-radius: 1rem 1rem 0 0;
+        }
+
+        .description {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+
+            .layout {
+                width: 85%;
+
+                h3,
+                p {
+                    margin: 0.8rem;
+                   
+                }
+            }
+
+            .layout-star {
+                width: 5%;
+
+                i {
+                    font-size: 2rem;
+                    position: absolute;
+                    right: 1rem;
+                    top: 50%;
+                   transform:translatey(-50%); 
+
+                }
+
+                .fas {
+                    color: transparent;
+                    @include mixins.gradient-linear;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    opacity: 0;
+                    transition: all 200ms e;
+
+    
+                }
+
+                &:hover .fas {
+                    opacity: 1;
+                }
+               
+
+            }
+
+
+
+        }
+
+    }
+
+    span {
+        position: absolute;
+        content: "";
+        right: 10px;
+        top: 20px;
+        font-weight: bold;
+        background-color: #99E2D0;
+        color: #2FAF94;
+        padding: 0.5rem;
+        width: 80px;
+    }
+
+}
