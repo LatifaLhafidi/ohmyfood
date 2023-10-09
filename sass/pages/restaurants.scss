@@ -57,7 +57,7 @@
 .menus {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 3rem;
 
     & .underline {
         width: 40px;
@@ -71,7 +71,7 @@
     .menus-category {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
 
         h3 {
             color: #000;

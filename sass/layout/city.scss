@@ -1,5 +1,6 @@
+@use "../utils/colors";
 .city {
-    background-color:lightgrey;
+    background-color:colors.$color_city;
     display: flex;
     align-items: center;
     text-align: center;

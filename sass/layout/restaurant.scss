@@ -1,25 +1,21 @@
 @use "../utils/mixins.scss";
+@use "../utils/colors.scss";
 .restaurant {
-    background-color: #F6F6F6;
-    margin-top: 30px;
-    padding: 0 5rem;
+    background-color: colors.$lightgrey ;
+    padding: 2rem 5rem;
   
     @media screen and (max-width:900px) {
-        padding: 0 1rem;
+        padding: 2rem 1rem;
     }
 
-    h2 {
-        padding-top: 1rem;
-
-
-
-    }
+   
 
     .cards {
         display: flex;
         flex-wrap: wrap;
-        gap: 3rem;
+        gap: 4rem;
         padding-bottom: 4rem;
+        padding-top: 2rem;
         @media screen and (max-width:900px) {
             display: flex;
             flex-direction: column;
@@ -113,10 +109,10 @@
         right: 10px;
         top: 20px;
         font-weight: bold;
-        background-color: #99E2D0;
+        background-color: colors.$color-tertiary;
         color: #2FAF94;
         padding: 0.5rem;
-        width: 80px;
+        width: 90px;
     }
 
 }

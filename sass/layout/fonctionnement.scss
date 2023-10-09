@@ -1,15 +1,16 @@
 @use "../utils/mixins.scss";
+@use "../utils/colors.scss";
 
 .fonctionnement{
     background-color: white;
-    padding: 0 5rem;
+    padding: 2rem 5rem;
     @media screen and (max-width:900px) {
-      padding: 0 1rem;
+      padding: 2rem 1rem;
       
    }
     & ol{
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
         gap:2rem;
         @media screen and (max-width:900px) {
@@ -18,13 +19,14 @@
         }
       }
        & li {
-        background-color: #F6F6F6;
-        padding: 1.2rem 2rem;
+        background-color: colors.$lightgrey;
+        padding: 1rem 2rem;
         border-radius: 1rem;
         list-style: none;
         flex-grow: 1;
         font-size: 1rem;
         font-weight: bold;
+        width: 20%;
         @include mixins.box-shadow;
         @media screen and (max-width:900px) {
           width: 100%;
