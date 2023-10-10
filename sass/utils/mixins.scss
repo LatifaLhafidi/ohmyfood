@@ -1,6 +1,6 @@
 @mixin gradient-linear {
     background-image: 
-    linear-gradient(#FF79DA, #9356DC); 
+    linear-gradient(#9356DC,#FF79DA); 
 
 }
 @mixin box-shadow{
@@ -22,4 +22,23 @@
     cursor: pointer;
     @include gradient-linear;
     @include box-shadow;
+}
+@mixin heart{
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    font: var(--fa-font-regular);
+    content: "\f004";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform:translatey(-50%);
+    color: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 1;
+    transition: all 200ms ease-in-out; 
 }

@@ -1,5 +1,6 @@
 @use "../utils/mixins.scss";
 @use "../utils/colors.scss";
+
 .restaurant {
     background-color: colors.$lightgrey ;
     padding: 2rem 5rem;
@@ -53,53 +54,34 @@
         }
 
         .description {
-            display: flex;
-            justify-content: space-between;
             position: relative;
+            &::before{
+               @include mixins.heart;
+              
+            }
+            &::after{
+             @include mixins.heart;   
+             @include mixins.gradient-linear; 
+             font: var(--fa-font-solid);
+             font-size: 2rem;
+             opacity: 0; 
+             color:transparent;
+            
+            }
+            &:hover::after{
+                opacity: 1; 
+                transform:translatey(-50%) scale(1.1);  
+            }
 
-            .layout {
-                width: 85%;
 
-                h3,
-                p {
+                h3, p {
                     margin: 0.8rem;
                    
                 }
-            }
+            
 
-            .layout-star {
-                width: 5%;
-
-                i {
-                    font-size: 2rem;
-                    position: absolute;
-                    right: 1rem;
-                    top: 50%;
-                   transform:translatey(-50%); 
-
-                }
-
-                .fas {
-                    color: transparent;
-                    @include mixins.gradient-linear;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    opacity: 0;
-                    transition: all 200ms e;
-
-    
-                }
-
-                &:hover .fas {
-                    opacity: 1;
-                }
-               
-
-            }
-
-
-
-        }
+            
+  }
 
     }
 

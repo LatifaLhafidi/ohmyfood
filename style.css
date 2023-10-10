@@ -86,7 +86,7 @@ header {
   margin-top: 1rem;
   transition: transform 200ms;
   cursor: pointer;
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(#9356DC, #FF79DA);
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
 }
 .explorer button:hover {
@@ -200,37 +200,57 @@ header {
   border-radius: 1rem 1rem 0 0;
 }
 .restaurant .card .description {
-  display: flex;
-  justify-content: space-between;
   position: relative;
 }
-.restaurant .card .description .layout {
-  width: 85%;
-}
-.restaurant .card .description .layout h3,
-.restaurant .card .description .layout p {
-  margin: 0.8rem;
-}
-.restaurant .card .description .layout-star {
-  width: 5%;
-}
-.restaurant .card .description .layout-star i {
+.restaurant .card .description::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  font: var(--fa-font-regular);
+  content: "\f004";
   font-size: 2rem;
   position: absolute;
   right: 1rem;
   top: 50%;
   transform: translatey(-50%);
-}
-.restaurant .card .description .layout-star .fas {
-  color: transparent;
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  color: inherit;
   background-clip: text;
   -webkit-background-clip: text;
-  opacity: 0;
-  transition: all 200ms e;
-}
-.restaurant .card .description .layout-star:hover .fas {
   opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+.restaurant .card .description::after {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  font: var(--fa-font-regular);
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translatey(-50%);
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  font: var(--fa-font-solid);
+  font-size: 2rem;
+  opacity: 0;
+  color: transparent;
+}
+.restaurant .card .description:hover::after {
+  opacity: 1;
+  transform: translatey(-50%) scale(1.1);
+}
+.restaurant .card .description h3, .restaurant .card .description p {
+  margin: 0.8rem;
 }
 .restaurant span {
   position: absolute;
@@ -325,24 +345,63 @@ footer .footer .menu a {
   margin-top: 1rem;
   transition: transform 200ms;
   cursor: pointer;
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(#9356DC, #FF79DA);
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
 }
 
 .resto-title {
-  padding: 1rem 2rem 2rem 1rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-.resto-title i {
-  font-size: 1.3rem;
-  color: red;
+  padding: 1rem 1rem 2rem 1rem;
 }
 .resto-title h2 {
   font-family: "Shrikhand", "sans serif";
+  position: relative;
+}
+.resto-title h2::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  font: var(--fa-font-regular);
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translatey(-50%);
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+.resto-title h2::after {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  font: var(--fa-font-regular);
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translatey(-50%);
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  font: var(--fa-font-solid);
+  font-size: 2rem;
+  opacity: 0;
+  color: transparent;
+}
+.resto-title h2:hover::after {
+  opacity: 1;
+  transform: translatey(-50%) scale(1.1);
 }
 
 .menus {
