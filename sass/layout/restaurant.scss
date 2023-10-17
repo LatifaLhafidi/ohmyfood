@@ -55,22 +55,25 @@
 
         .description {
             position: relative;
-            &::before{
-               @include mixins.heart;
-              
+           i{
+            font-size: 2rem;
+            position:absolute;
+            right: 1rem;
+            top: 50%;
+            transform:translatey(-50%);
+           }
+            .fas{
+                color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: all 200ms ease-in-out;
+                @include mixins.gradient-linear; 
             }
-            &::after{
-             @include mixins.heart;   
-             @include mixins.gradient-linear; 
-             font: var(--fa-font-solid);
-             font-size: 2rem;
-             opacity: 0; 
-             color:transparent;
-            
-            }
-            &:hover::after{
-                opacity: 1; 
-                transform:translatey(-50%) scale(1.1);  
+            :hover .fas{
+                opacity: 1;
+                transform:translatey(-50%)scale(1.2);
+
             }
 
 

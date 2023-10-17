@@ -1,51 +1,51 @@
 footer { 
-    background-color: #353535;
-    color: white;
-    padding: 2rem 1rem 1rem 1rem;
-    
-   
+  background-color: #353535;
+  color: white;
+  padding: 2rem 1rem 1rem 1rem;
+  
+ 
 .footer {
-    display: flex;
-    flex-wrap: nowrap;
-    gap:1rem;
-    justify-content: flex-end;
-    @media screen and (max-width:900px) {
-          padding-left: 5%;
-          display: flex;
-          flex-direction: column-reverse;
-   
-      }
-      .footer__logo{
-        font-family: "shrikhand";
-        font-size: 1.5rem;
-        padding-right: 3rem;
-           
-      }
-      .menu{
+  display: flex;
+  flex-wrap: nowrap;
+  gap:1rem;
+  justify-content: flex-end;
+  @media screen and (max-width:900px) {
+        padding-left: 5%;
         display: flex;
-        flex-wrap: nowrap;
-        gap:2rem;
-        padding-top:15px;
-        padding-right: 2rem;
-        @media screen and (max-width:900px) {
-          display: flex;
-          flex-direction: column;
-        } 
+        flex-direction: column-reverse;
+ 
+    }
+    .footer__logo{
+      font-family: "shrikhand";
+      font-size: 1.5rem;
+      padding-right: 3rem;
+         
+    }
+    .menu{
+      display: flex;
+      flex-wrap: nowrap;
+      gap:2rem;
+      padding-top:15px;
+      padding-right: 2rem;
+      @media screen and (max-width:900px) {
+        display: flex;
+        flex-direction: column;
+      } 
 
-        p{
-          font-size: 1.2rem;
-          
-        }
-        a {
-          text-decoration: none;
-          color: white;
-          
-        } 
-       
-       
+      p{
+        font-size: 1.2rem;
+        
       }
-    
-  }
-   
-   
+      a {
+        text-decoration: none;
+        color: white;
+        
+      } 
+     
+     
+    }
+  
+}
+ 
+ 
 }
