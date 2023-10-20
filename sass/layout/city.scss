@@ -1,6 +1,7 @@
 @use "../utils/colors";
+
 .city {
-    background-color:colors.$color_city;
+    background-color:colors.$color_gray;
     display: flex;
     align-items: center;
     text-align: center;
@@ -9,7 +10,6 @@
     padding: 1rem;
     font-weight: bold;
     i{
-      font-size: 1.2rem;
-    } 
-   
+      font-size: 1.1rem;
+    }   
 }

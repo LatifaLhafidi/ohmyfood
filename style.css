@@ -17,7 +17,6 @@ p {
 body {
   margin: 0px;
   min-width: 320px;
-  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -48,27 +47,6 @@ header {
   color: #000;
 }
 
-.loader {
-  display: grid;
-  place-items: center;
-  background-color: #fff;
-  height: 100vh;
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  opacity: 0.8;
-  animation: desappear 1s;
-  animation-fill-mode: both;
-}
-
-@keyframes desappear {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0);
-  }
-}
 .city {
   background-color: var(--Grey-2, #EAEAEA);
   display: flex;
@@ -80,7 +58,7 @@ header {
   font-weight: bold;
 }
 .city i {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .explorer {
@@ -242,10 +220,11 @@ header {
   opacity: 1;
   transform: translatey(-50%) scale(1.2);
 }
-.restaurant .card .description h3, .restaurant .card .description p {
+.restaurant .card .description h3,
+.restaurant .card .description p {
   margin: 0.8rem;
 }
-.restaurant span {
+.restaurant .card span {
   position: absolute;
   content: "";
   right: 10px;
@@ -311,6 +290,14 @@ footer .footer .menu a {
     opacity: 1;
   }
 }
+@keyframes desappear {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
 .bannar img {
   display: block;
   width: 100%;
@@ -321,7 +308,7 @@ footer .footer .menu a {
 
 .main {
   position: relative;
-  background-color: #f6f6f6;
+  background-color: var(--Background, #f6f6f6);
   border-radius: 3rem 3rem 0 0;
   margin: -30px 120px 0px;
   padding: 12px 12vw;
@@ -335,8 +322,6 @@ footer .footer .menu a {
 .main_header {
   padding: 2rem 1rem;
   position: relative;
-  display: grid;
-  place-items: center;
 }
 .main_header_title {
   font-family: "Shrikhand", "sans serif";
@@ -344,7 +329,7 @@ footer .footer .menu a {
 .main_header i {
   font-size: 2rem;
   position: absolute;
-  right: 1rem;
+  right: 3rem;
   top: 50%;
   transform: translatey(-50%);
 }
@@ -390,8 +375,6 @@ footer .footer .menu a {
   gap: 1rem;
 }
 .main .menus_category_title {
-  color: #000;
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -418,19 +401,19 @@ footer .footer .menu a {
   animation-delay: 0ms;
 }
 .main .menus_category .menu-item:nth-child(1) {
-  animation-delay: 200ms;
+  animation-delay: 300ms;
 }
 .main .menus_category .menu-item:nth-child(2) {
-  animation-delay: 400ms;
-}
-.main .menus_category .menu-item:nth-child(3) {
   animation-delay: 600ms;
 }
+.main .menus_category .menu-item:nth-child(3) {
+  animation-delay: 900ms;
+}
 .main .menus_category .menu-item:nth-child(4) {
-  animation-delay: 800ms;
+  animation-delay: 1200ms;
 }
 .main .menus_category .menu-item:nth-child(5) {
-  animation-delay: 1000ms;
+  animation-delay: 1500ms;
 }
 .main .menus_category .menu-item .menu-item_description {
   padding: 1rem;
@@ -460,6 +443,21 @@ footer .footer .menu a {
 }
 .main .menus_category .menu-item:hover .menu-item_check {
   margin-right: 0;
+}
+
+.loader {
+  display: grid;
+  place-items: center;
+  background-color: white;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.8;
+  animation: desappear 1s 2s both;
+}
+.loader i {
+  color: #99e2d0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,34 +1,29 @@
 @use "../utils/mixins.scss";
 @use "../utils/colors";
 
-
 .explorer {
     text-align: center;
     padding: 1px;
-    background-color: colors.$lightgrey; 
-    & h2{
-        font-size: 40px; 
-        padding-top:1rem;
-       
+    background-color: colors.$lightgrey;
+
+    & h2 {
+        font-size: 40px;
+        padding-top: 1rem;
+
     }
+
     & p {
         font-size: 1rem;
         padding-top: 1rem;
-       
+
     }
-    & button{
-       @include mixins.base-button;
-      
-          
+
+    & button {
+        @include mixins.base-button;
     }
-    & button:hover{
+
+    & button:hover {
         transform: scale(1.01);
         opacity: 0.9;
-     
-      
     }
-
 }
- 
- 
-

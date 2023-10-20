@@ -1,64 +1,65 @@
 @use "../utils/mixins.scss";
 @use "../utils/colors.scss";
 
-.fonctionnement{
-    background-color: white;
-    padding: 2rem 5rem;
-    @media screen and (max-width:900px) {
-      padding: 2rem 1rem;
-      
-   }
-    & ol{
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        gap:2rem;
-        @media screen and (max-width:900px) {
-           flex-direction: column;
-           
-        }
-      }
-       & li {
-        background-color: colors.$lightgrey;
-        padding: 1rem 2rem;
-        border-radius: 1rem;
-        list-style: none;
-        flex-grow: 1;
-        font-size: 1rem;
-        font-weight: bold;
-        width: 30%;
-        @include mixins.box-shadow;
-        @media screen and (max-width:900px) {
-          width: 100%;
-          min-width: 23rem;
-          
-       }
-        
-  
-      & i {
-        margin-right: 1rem;
-        color:gray;
-        &:hover {
-          color:#9356dc;;
-        }
-      }
-      & span {
-        position: relative;
-        left: -3rem;
-        border: 1px solid #9356dc;
-        padding: 0.4rem 0.8rem;
-        border-radius: 50%;
-        font-weight: bold;
-        background-color: #9356dc;
-        color: white;
-        & :hover {
-          cursor: pointer;
-        }
-      }
-    }
-    
-    
+.fonctionnement {
+  background-color: white;
+  padding: 2rem 5rem;
+
+  @media screen and (max-width:900px) {
+    padding: 2rem 1rem;
+
   }
 
-  
-  
+  & ol {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    gap: 2rem;
+
+    @media screen and (max-width:900px) {
+      flex-direction: column;
+
+    }
+  }
+
+  & li {
+    background-color: colors.$lightgrey;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    list-style: none;
+    flex-grow: 1;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 30%;
+    @include mixins.box-shadow;
+
+    @media screen and (max-width:900px) {
+      width: 100%;
+      min-width: 23rem;
+    }
+
+    & i {
+      margin-right: 1rem;
+      color: gray;
+
+      &:hover {
+        color: colors.$Primaire;
+      }
+    }
+
+    & span {
+      position: relative;
+      left: -3rem;
+      border: 1px solid colors.$Primaire;
+      padding: 0.4rem 0.8rem;
+      border-radius: 50%;
+      font-weight: bold;
+      background-color: colors.$Primaire;
+      color: white;
+
+      & :hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
